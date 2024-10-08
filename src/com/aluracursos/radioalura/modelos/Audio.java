@@ -5,12 +5,9 @@ public class Audio {
     private int totalDeReproducciones ;
     private int totalDeMeGusta ;
     private int clasificacion ;
-    private int duracionEnMinutos ;
+    private double duracionEnMinutos ;
     private String genero ;
 
-    public int getDuracionEnMinutos() {
-        return duracionEnMinutos;
-    }
 
     public String getGenero() {
         return genero;
@@ -20,7 +17,11 @@ public class Audio {
         this.genero = genero;
     }
 
-    public void setDuracionEnMinutos(int duracionEnMinutos) {
+    public double getDuracionEnMinutos() {
+        return duracionEnMinutos;
+    }
+
+    public void setDuracionEnMinutos(double duracionEnMinutos) {
         this.duracionEnMinutos = duracionEnMinutos;
     }
 
