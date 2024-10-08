@@ -1,6 +1,7 @@
 package com.cursosalura.radioalura.principal;
 
 import com.aluracursos.radioalura.modelos.Cancion;
+import com.aluracursos.radioalura.modelos.MisFavoritos;
 import com.aluracursos.radioalura.modelos.Podcast;
 
 public class Principal {
@@ -17,17 +18,31 @@ public class Principal {
         miPodcast.setTitulo("Feminismo");
         miPodcast.setDuracionEnMinutos(120);
 
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < 15000; i++) {
             miCancion.meGusta();
 
         }
 
-        for (int i = 0; i < 5000 ; i++) {
+        for (int i = 0; i < 200 ; i++) {
             miCancion.reproduce();
+
+        }
+
+        for (int i = 0; i < 100; i++) {
+            miPodcast.meGusta();
+
+        }
+
+        for (int i = 0; i < 8000 ; i++) {
+            miPodcast.reproduce();
 
         }
         System.out.println("Total de Reproducciones " + miCancion.getTotalDeReproducciones());
         System.out.println("Total de Me Gusta " + miCancion.getTotalDeMeGusta());
+
+        MisFavoritos favoritos = new MisFavoritos() ;
+        favoritos.adicione(miCancion);
+        favoritos.adicione((miPodcast));
     }
 
 }

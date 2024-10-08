@@ -4,6 +4,16 @@ public class Cancion extends Audio {
     private String Autor ;
     private String Cantante ;
 
+    @Override
+    public int getClasificacion() {
+        if (getTotalDeMeGusta() > 5000) {
+            return  8;
+
+        } else {
+            return 4;
+        }
+    }
+
     public String getAutor() {
         return Autor;
     }
@@ -19,4 +29,6 @@ public class Cancion extends Audio {
     public void setCantante(String cantante) {
         Cantante = cantante;
     }
+
+
 }
